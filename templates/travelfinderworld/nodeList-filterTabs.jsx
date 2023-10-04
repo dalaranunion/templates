@@ -85,7 +85,8 @@ function App() {
         <li className="category-button-ctr" key={key}>
           <button
             className={
-              "category-link" + (currentCategory === category ? " active " : "")
+              "category-link" +
+              (currentCategory === category ? " active-category " : "")
             }
             onClick={() => {
               categoryBtnHandler(category);
@@ -137,7 +138,7 @@ function App() {
       <div className="post-container contentwidth guttercontentwidth">
         {filteredNodes}
       </div>
-      <div className="pagination-bar mt-2">
+      <div className="pagination-bar mt-2 mb-5">
         <LoadMoreButton disable={maxResults >= nodes.length} />
       </div>
     </section>
